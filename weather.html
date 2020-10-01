@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ff14极光</title>
+	<style type="text/css">
+		#table {
+			border-collapse:collapse;
+			font-family:PingFangSC-Regular,Verdana,Arial,'微软雅黑','宋体';
+			margin:0;
+		}
+		#table tr:nth-child(2n+1) {
+			background-color: #F5F5F5;
+		}
+	</style>
+	<script type="text/javascript" src="weather.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			//库尔札斯西部高地
+			var auroraList = aurora.getAuroraList(100)
+			var s = "";
+			for(var i=0;i<auroraList.length;i++) {
+				s+="<tr><td>"+(i+1)+"</td><td>"+String(auroraList[i]).substring(4,21)+"</td></tr>"
+			}
+			document.getElementById('table').innerHTML=s;
+		}
+	</script>
+</head>
+<body>
+	地点:库尔札斯西部高地
+	时间如下
+	<table border='solid' id="table">
+		
+	</table>
+</body>
+</html> 
