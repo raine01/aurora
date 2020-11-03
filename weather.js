@@ -16,7 +16,7 @@ aurora = {
 		var step1 = ((calcBase<<11)^calcBase)>>>0;
 		var step2 = ((step1>>>8)^step1)>>>0;
 		var weatherId = step2%100;
-		if(weatherId>70&&weatherId<=75) {
+		if(weatherId>=70&&weatherId<75) {
 			return lDate;
 		}
 	},
